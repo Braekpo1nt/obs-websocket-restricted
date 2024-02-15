@@ -175,7 +175,7 @@ If you want to be able to use Stream Deck keys to trigger the actions you pre-se
   ```
   Replace `websocket.braekpo1nt.com` with your Cloudflare Tunnel host (or if you're using Port Forwarding, replace it with the public ip address of your OBS Machine's Network).
 #### Linux/macOS
- - Create a bash script for each command. In our example, we have two (one for `buddy` and one for `braekpo1nt`):
+- Create a bash script for each command. In our example, we have two (one for `buddy` and one for `braekpo1nt`):
   `path/to/buddy-scene.sh`:
   ```bash
   #!/bin/bash
