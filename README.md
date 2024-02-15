@@ -17,7 +17,7 @@ See the figure in [Overview of the Method](#overview-of-the-method) for a graphi
 ## Overview of the method
 The Interface VM receives specific, limited SSH commands from the Client, and sends pre-determined corresponding requests to the OBS Websocket server on the OBS Machine. Cloudflare can optionally be used to secure your Client's connection to the Interface VM. If cloudflare is not used, Port Forwarding can be used to expose your Interface VM to the internet. 
 
-![flow diagram showing the network topography](../obs-flow.png)
+![flow diagram showing the network topography](./obs-flow.png)
 
 # Requirements/Prerequisites
 This is stuff I'm not teaching you lol.
