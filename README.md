@@ -215,6 +215,18 @@ Note that for this to work:
 # Common Issues/Errors
 - If the IP addresses of your OBS Machine, your Interface VM, or your OBS Machine's Network changes, you will need to update your configurations. 
 - If your Interface VM is down, your Client won't be able to control your OBS Machine's OBS instance. 
+- If you're using `Git Bash` for Windows (or somehow otherwise using a bash command prompt) in conjunction with the `.bat` scripts and Cloudflare Tunnels, and your Command Prompt (CMD) is giving you the following error:
+  ```batch
+  CreateProcessW failed error:2
+  posix_spawnp: No such file or directory
+  ```
+  You may need to change your `~/.ssh/config` file on your Client to use Windows paths with escape characters:
+  ```
+  Host websocket.braekpo1nt.com
+    ProxyCommand C:\\path\\to\\cloudflared.exe access ssh --hostname %h
+    IdentityFile C:\\User\\username\\.ssh\\id_ed25519
+  ```
+  Rather than using `/c/path/to/cloudflared.exe`
 
 # Contributing/Bug Reports
 Feel free to leave a comment, make a pull request from a fork, or otherwise submit an issue on the GitHub repo to let me know how this can be improved or built upon. 

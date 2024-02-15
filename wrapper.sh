@@ -20,7 +20,7 @@
 command_length=${#SSH_ORIGINAL_COMMAND}
 # Check if the length is greater than 10 (the largest of my options below is 10 characters)
 if (( $command_length > 10 )); then
-    echo "Error: SSH_ORIGINAL_COMMAND size exceeds 4 characters (passed in option is too long)"
+    echo "Error: SSH_ORIGINAL_COMMAND size exceeds 10 characters (passed in option is too long)"
     exit 1
 fi
 
